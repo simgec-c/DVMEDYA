@@ -2009,7 +2009,19 @@
             <div class="brand-category-label">Haber ve Medya</div>
             <div class="brands-grid">
               <div class="brand-card">
-                <div class="brand-card-logo" style="align-self: center">
+                <div
+                  class="brand-card-logo is-clickable"
+                  style="align-self: center"
+                  onclick="openVideoModal('tgrthaber')"
+                  role="button"
+                  tabindex="0"
+                  onkeydown="
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault();
+                      openVideoModal('tgrthaber');
+                    }
+                  "
+                >
                   <img
                     src="https://html-05b61c.gitlab.io/dv/assets/images/logo/dv_tgrt_logo_siyah.png"
                     alt="TGRT Haber"
@@ -2044,7 +2056,19 @@
               </div>
 
               <div class="brand-card">
-                <div class="brand-card-logo" style="align-self: center">
+                <div
+                  class="brand-card-logo is-clickable"
+                  style="align-self: center"
+                  onclick="openVideoModal('turkiyegazetesi')"
+                  role="button"
+                  tabindex="0"
+                  onkeydown="
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault();
+                      openVideoModal('turkiyegazetesi');
+                    }
+                  "
+                >
                   <img
                     src="https://html-05b61c.gitlab.io/dv/assets/images/logo/dv_tg_logo.png"
                     alt="Türkiye Gazetesi"
@@ -2079,7 +2103,19 @@
               </div>
 
               <div class="brand-card">
-                <div class="brand-card-logo" style="align-self: center">
+                <div
+                  class="brand-card-logo is-clickable"
+                  style="align-self: center"
+                  onclick="openVideoModal('turkiyetoday')"
+                  role="button"
+                  tabindex="0"
+                  onkeydown="
+                    if (event.key === 'Enter' || event.key === ' ') {
+                      event.preventDefault();
+                      openVideoModal('turkiyetoday');
+                    }
+                  "
+                >
                   <img
                     src="https://html-05b61c.gitlab.io/dv/assets/images/logo/dv_today_logo.png"
                     alt="Türkiye Today"
@@ -2560,7 +2596,7 @@
           <a
             class="news-card"
             id="kart-1"
-            href="https://www.turkiyegazetesi.com.tr/yasam/turkiye-gazetesi-ve-ihlas-medya-dijital-varliklar-sektor-temsilcilerini-iftar-program-1773506"
+            href="https://www.youtube.com/watch?v=ZdRKLlXEu4k"
             target="_blank"
           >
             <div class="news-card-img">
@@ -2571,7 +2607,7 @@
             </div>
             <div class="news-card-body">
               <div class="news-card-cat">Dijital Varlıklar / Haber</div>
-              <h4>Türkiye Gazetesi Yeni Nesil Okuyucuyla Buluşuyor.</h4>
+              <h4>Vali Gül'den İhlas Medya'ya teşekkür</h4>
               <div class="news-card-link">
                 Devamını Oku
                 <svg
@@ -2619,12 +2655,12 @@
           <a
             class="news-card"
             id="kart-3"
-            href="https://www.turkiyetoday.com/newsletters"
+            href="https://www.youtube.com/watch?v=pVv27PyqjOs"
             target="_blank"
           >
             <div class="news-card-img">
               <img
-                src="https://html-05b61c.gitlab.io/dv/assets/images/home/bizden-haberler-today.jpeg"
+                src="bizden-haberler-today.jpeg"
                 alt="Türkiye Today"
               />
             </div>
@@ -2679,7 +2715,7 @@
             <a
               class="news-card"
               id="kart-5"
-              href="https://www.tgrthaber.com/medya/turkiye-avrupa-is-dunyasi-odul-toreni-istanbulda-gerceklesti-tgrthabercoma-anlamli-od-3223646"
+              href="https://www.youtube.com/watch?v=_vRxaYWry8M"
               target="_blank"
             >
               <div class="news-card-img">
@@ -3053,6 +3089,27 @@
       // Marka bazlı video + sosyal medya konfigürasyonu.
       // Gerçek video ve linkleri buradan güncelleyebilirsiniz.
       const BRAND_VIDEOS = {
+        tgrthaber: {
+          title: "TGRT Haber",
+          tagline: "24 saat kesintisiz haber",
+          logo: "dv_tgrt_logo_siyah.png",
+          youtubeId: "_vRxaYWry8M",
+          social: {},
+        },
+        turkiyegazetesi: {
+          title: "Türkiye Gazetesi",
+          tagline: "Yarım asırlık güven",
+          logo: "dv_tg_logo.png",
+          youtubeId: "ZdRKLlXEu4k",
+          social: {},
+        },
+        turkiyetoday: {
+          title: "Türkiye Today",
+          tagline: "Türkiye'nin dünyaya açılan penceresi",
+          logo: "dv_today_logo.png",
+          youtubeId: "pVv27PyqjOs",
+          social: {},
+        },
         genctg: {
           title: "Genç TG",
           tagline: "Gençliğin sesi, dijitalin nabzı",
