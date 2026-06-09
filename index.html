@@ -931,6 +931,99 @@
         color: white;
       }
 
+      /* İştirakler */
+      .affiliates {
+        margin-top: 40px;
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: var(--r-lg);
+        padding: 40px;
+      }
+      .affiliates-head {
+        max-width: 760px;
+        margin: 0 auto 32px;
+        text-align: center;
+      }
+      .affiliates-head h3 {
+        font-family: "Roboto", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--ink);
+        letter-spacing: -0.02em;
+        margin-bottom: 14px;
+      }
+      .affiliates-head p {
+        font-size: 0.92rem;
+        color: var(--ink-muted);
+        line-height: 1.7;
+      }
+      .affiliates-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+      }
+      .affiliates-grid .affiliate-logo {
+        flex: 0 0 calc((100% - 3 * 16px) / 4);
+      }
+      .affiliate-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px 16px;
+        border: 1px solid var(--line);
+        border-radius: var(--r);
+        background: white;
+        text-decoration: none;
+        transition:
+          border-color 0.2s,
+          box-shadow 0.2s,
+          transform 0.2s;
+      }
+      .affiliate-logo img {
+        height: 72px;
+        max-width: 100%;
+        object-fit: contain;
+      }
+      .affiliate-logo:hover {
+        border-color: var(--accent);
+        box-shadow: 0 8px 28px rgba(0, 87, 255, 0.12);
+        transform: translateY(-3px);
+      }
+      /* Kendi içinde bol boşluk olan logoları büyüt */
+      .affiliate-logo--md img {
+        height: 96px;
+      }
+      .affiliate-logo--lg img {
+        height: 140px;
+      }
+      .affiliate-logo--xl img {
+        height: 170px;
+      }
+      /* Sıkı/iri logoları küçült */
+      .affiliate-logo--sm img {
+        height: 46px;
+      }
+      @media (max-width: 1024px) {
+        .affiliates-grid .affiliate-logo {
+          flex: 0 0 calc((100% - 2 * 16px) / 3);
+        }
+      }
+      @media (max-width: 700px) {
+        .affiliates {
+          padding: 28px 20px;
+        }
+        .affiliates-grid {
+          gap: 12px;
+        }
+        .affiliates-grid .affiliate-logo {
+          flex: 0 0 calc((100% - 12px) / 2);
+        }
+        .affiliate-logo img {
+          height: 56px;
+        }
+      }
+
       /* Marquee */
       .logos-marquee-wrap {
         overflow: hidden;
@@ -2429,6 +2522,138 @@
                   <li>Veri tabanlı hedefleme stratejileri</li>
                 </ul>
                 <a href="#contact" class="btn-outline">Teklif Alın →</a>
+              </div>
+            </div>
+
+            <!-- İştirakler -->
+            <div class="affiliates">
+              <div class="affiliates-head">
+                <h3>Sosyal Medya Danışmanlığı ve Destek Hizmetleri</h3>
+                <p>
+                  Dijital varlığınızı bir adım öteye taşımak için buradayız.
+                  İçerik planlamasından hesap yönetimine ve teknik desteğe kadar
+                  her adımda yanınızda oluyor; sosyal medya platformlarında
+                  kurumsal, istikrarlı ve güçlü bir büyüme elde etmeniz için
+                  profesyonel ekibimizle destek sağlıyoruz.
+                </p>
+              </div>
+              <div class="affiliates-grid">
+                <div class="affiliate-logo affiliate-logo--lg">
+                  <img
+                    src="iştirak%20logolar/vakıf.png"
+                    alt="İhlas Vakfı"
+                  />
+                </div>
+                <a
+                  href="https://x.com/ihlaskoleji"
+                  target="_blank"
+                  rel="noopener"
+                  class="affiliate-logo affiliate-logo--md"
+                >
+                  <img
+                    src="iştirak%20logolar/Ihlas_Koleji.png"
+                    alt="İhlas Koleji"
+                  />
+                </a>
+                <a
+                  href="https://x.com/turkiyehastane"
+                  target="_blank"
+                  rel="noopener"
+                  class="affiliate-logo affiliate-logo--lg"
+                >
+                  <img
+                    src="iştirak%20logolar/turkiye_hastanesi_logo_1080x1080-01.png"
+                    alt="Türkiye Hastanesi"
+                  />
+                </a>
+                <a
+                  href="https://x.com/ihlasambalaj"
+                  target="_blank"
+                  rel="noopener"
+                  class="affiliate-logo"
+                >
+                  <img
+                    src="iştirak%20logolar/Ihlas_Ambalaj.png"
+                    alt="İhlas Ambalaj"
+                  />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/ihlas-matbaacilik"
+                  target="_blank"
+                  rel="noopener"
+                  class="affiliate-logo"
+                >
+                  <img
+                    src="iştirak%20logolar/Ihlas_Matbaacilik.png"
+                    alt="İhlas Matbaacılık"
+                  />
+                </a>
+                <a
+                  href="https://x.com/ihlastermalotel"
+                  target="_blank"
+                  rel="noopener"
+                  class="affiliate-logo affiliate-logo--xl"
+                >
+                  <img
+                    src="iştirak%20logolar/n2.png"
+                    alt="İhlas Kuzuluk Termal Otel"
+                  />
+                </a>
+                <a
+                  href="https://x.com/ihlaskuzuluk"
+                  target="_blank"
+                  rel="noopener"
+                  class="affiliate-logo affiliate-logo--xl"
+                >
+                  <img
+                    src="iştirak%20logolar/2j.png"
+                    alt="İhlas Kaplıca Evleri"
+                  />
+                </a>
+                <a
+                  href="https://x.com/ihlasarmutlucom"
+                  target="_blank"
+                  rel="noopener"
+                  class="affiliate-logo affiliate-logo--lg"
+                >
+                  <img
+                    src="iştirak%20logolar/Armutlu_Tatil_Koyu.png"
+                    alt="Armutlu Tatil Köyü"
+                  />
+                </a>
+                <a
+                  href="https://x.com/bizimevler"
+                  target="_blank"
+                  rel="noopener"
+                  class="affiliate-logo affiliate-logo--sm"
+                >
+                  <img
+                    src="iştirak%20logolar/Artboard%201.png"
+                    alt="Bizim Evler"
+                  />
+                </a>
+                <a
+                  href="https://x.com/ortaasyainvest"
+                  target="_blank"
+                  rel="noopener"
+                  class="affiliate-logo affiliate-logo--lg"
+                >
+                  <img
+                    src="iştirak%20logolar/Artboard%201%20copy%2014.png"
+                    alt="Orta Asya Investment Holding"
+                  />
+                </a>
+                <a
+                  href="https://x.com/sifayemekcom"
+                  target="_blank"
+                  rel="noopener"
+                  class="affiliate-logo"
+                >
+                  <img
+                    src="iştirak%20logolar/şifa%20yemek%201.png"
+                    alt="Şifa Yemek"
+                  />
+                </a>
               </div>
             </div>
           </div>
