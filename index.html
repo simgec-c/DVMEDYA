@@ -933,80 +933,82 @@
 
       /* İştirakler */
       .affiliates {
-        margin-top: 40px;
+        margin-top: 32px;
         background: white;
         border: 1px solid var(--line);
         border-radius: var(--r-lg);
-        padding: 40px;
+        padding: 28px;
       }
       .affiliates-head {
         max-width: 760px;
-        margin: 0 auto 32px;
+        margin: 0 auto 22px;
         text-align: center;
       }
       .affiliates-head h3 {
         font-family: "Roboto", sans-serif;
-        font-size: 1.5rem;
+        font-size: 1.35rem;
         font-weight: 800;
         color: var(--ink);
         letter-spacing: -0.02em;
-        margin-bottom: 14px;
+        margin-bottom: 12px;
       }
       .affiliates-head p {
-        font-size: 0.92rem;
+        font-size: 0.88rem;
         color: var(--ink-muted);
-        line-height: 1.7;
+        line-height: 1.65;
       }
       .affiliates-grid {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 16px;
+        column-gap: 12px;
+        row-gap: 0;
       }
       .affiliates-grid .affiliate-logo {
-        flex: 0 0 calc((100% - 3 * 16px) / 4);
+        flex: 0 0 calc((100% - 5 * 12px) / 6);
       }
       .affiliate-logo {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 12px 16px;
-        border: 1px solid var(--line);
-        border-radius: var(--r);
-        background: white;
+        padding: 6px 12px;
         text-decoration: none;
         transition:
-          border-color 0.2s,
-          box-shadow 0.2s,
-          transform 0.2s;
+          transform 0.2s,
+          opacity 0.2s;
       }
       .affiliate-logo img {
-        height: 72px;
+        height: 62px;
         max-width: 100%;
         object-fit: contain;
       }
       .affiliate-logo:hover {
-        border-color: var(--accent);
-        box-shadow: 0 8px 28px rgba(0, 87, 255, 0.12);
-        transform: translateY(-3px);
+        transform: translateY(-4px);
+      }
+      /* Bir logonun üzerine gelince diğerleri hafif soluklaşsın */
+      .affiliates-grid:hover .affiliate-logo {
+        opacity: 0.55;
+      }
+      .affiliates-grid:hover .affiliate-logo:hover {
+        opacity: 1;
       }
       /* Kendi içinde bol boşluk olan logoları büyüt */
       .affiliate-logo--md img {
-        height: 96px;
+        height: 80px;
       }
       .affiliate-logo--lg img {
-        height: 140px;
+        height: 114px;
       }
       .affiliate-logo--xl img {
-        height: 170px;
+        height: 136px;
       }
       /* Sıkı/iri logoları küçült */
       .affiliate-logo--sm img {
-        height: 46px;
+        height: 44px;
       }
       @media (max-width: 1024px) {
         .affiliates-grid .affiliate-logo {
-          flex: 0 0 calc((100% - 2 * 16px) / 3);
+          flex: 0 0 calc((100% - 2 * 12px) / 3);
         }
       }
       @media (max-width: 700px) {
@@ -1020,7 +1022,7 @@
           flex: 0 0 calc((100% - 12px) / 2);
         }
         .affiliate-logo img {
-          height: 56px;
+          height: 40px;
         }
       }
 
@@ -2253,18 +2255,7 @@
             <div class="brand-category-label">Yeni Nesil Medya</div>
             <div class="brands-grid">
               <div class="brand-card">
-                <div
-                  class="brand-card-logo is-clickable"
-                  onclick="window.open('https://www.instagram.com/genctg/', '_blank', 'noopener')"
-                  role="button"
-                  tabindex="0"
-                  onkeydown="
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault();
-                      window.open('https://www.instagram.com/genctg/', '_blank', 'noopener');
-                    }
-                  "
-                >
+                <div class="brand-card-logo">
                   <img
                     src="https://html-05b61c.gitlab.io/dv/assets/images/logo/dv_tg_genc_logo_2.png"
                     alt="Genç TG"
@@ -2283,22 +2274,29 @@
                 </p>
                 <div class="brand-card-footer">
                   <span class="brand-tag">Gençlik</span>
+                  <a
+                    href="https://www.instagram.com/genctg/"
+                    target="_blank"
+                    rel="noopener"
+                    class="brand-link"
+                  >
+                    Ziyaret Et
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
 
               <div class="brand-card">
-                <div
-                  class="brand-card-logo is-clickable"
-                  onclick="window.open('https://www.instagram.com/feedtalkz/', '_blank', 'noopener')"
-                  role="button"
-                  tabindex="0"
-                  onkeydown="
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault();
-                      window.open('https://www.instagram.com/feedtalkz/', '_blank', 'noopener');
-                    }
-                  "
-                >
+                <div class="brand-card-logo">
                   <img
                     src="https://html-05b61c.gitlab.io/dv/assets/images/logo/dv_feedtalkz_logo_siyah.png"
                     alt="Feed Talkz"
@@ -2316,23 +2314,29 @@
                 </p>
                 <div class="brand-card-footer">
                   <span class="brand-tag">Sosyal</span>
-                  <span class="brand-link-soon">Takipte Kal</span>
+                  <a
+                    href="https://www.instagram.com/feedtalkz/"
+                    target="_blank"
+                    rel="noopener"
+                    class="brand-link"
+                  >
+                    Ziyaret Et
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
 
               <div class="brand-card">
-                <div
-                  class="brand-card-logo is-clickable"
-                  onclick="window.open('https://www.instagram.com/idaesportsgg/', '_blank', 'noopener')"
-                  role="button"
-                  tabindex="0"
-                  onkeydown="
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault();
-                      window.open('https://www.instagram.com/idaesportsgg/', '_blank', 'noopener');
-                    }
-                  "
-                >
+                <div class="brand-card-logo">
                   <img
                     src="https://html-05b61c.gitlab.io/dv/assets/images/logo/dv_ida_logo_mavi.png"
                     alt="İDA E-Spor"
@@ -2350,8 +2354,13 @@
                 </p>
                 <div class="brand-card-footer">
                   <span class="brand-tag">E-Spor</span>
-                  <a href="#contact" class="brand-link">
-                    Bilgi Al
+                  <a
+                    href="https://www.instagram.com/idaesportsgg/"
+                    target="_blank"
+                    rel="noopener"
+                    class="brand-link"
+                  >
+                    Ziyaret Et
                     <svg
                       width="14"
                       height="14"
@@ -2367,18 +2376,7 @@
               </div>
 
               <div class="brand-card">
-                <div
-                  class="brand-card-logo is-clickable"
-                  onclick="window.open('https://www.instagram.com/mavikadincom/', '_blank', 'noopener')"
-                  role="button"
-                  tabindex="0"
-                  onkeydown="
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault();
-                      window.open('https://www.instagram.com/mavikadincom/', '_blank', 'noopener');
-                    }
-                  "
-                >
+                <div class="brand-card-logo">
                   <img
                     src="https://html-05b61c.gitlab.io/dv/assets/images/logo/dv_mavikadin_logo.png"
                     alt="Mavi Kadın"
@@ -2395,22 +2393,29 @@
                 </p>
                 <div class="brand-card-footer">
                   <span class="brand-tag">Kadın</span>
+                  <a
+                    href="https://www.instagram.com/mavikadincom/"
+                    target="_blank"
+                    rel="noopener"
+                    class="brand-link"
+                  >
+                    Ziyaret Et
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
 
               <div class="brand-card">
-                <div
-                  class="brand-card-logo is-clickable"
-                  onclick="window.open('https://www.instagram.com/xtgsports/', '_blank', 'noopener')"
-                  role="button"
-                  tabindex="0"
-                  onkeydown="
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault();
-                      window.open('https://www.instagram.com/xtgsports/', '_blank', 'noopener');
-                    }
-                  "
-                >
+                <div class="brand-card-logo">
                   <img
                     src="https://html-05b61c.gitlab.io/dv/assets/images/logo/dv_xtg_spor_logo.png"
                     alt="XTG Spor"
@@ -2429,22 +2434,29 @@
                 </p>
                 <div class="brand-card-footer">
                   <span class="brand-tag">Spor</span>
+                  <a
+                    href="https://www.instagram.com/xtgsports/"
+                    target="_blank"
+                    rel="noopener"
+                    class="brand-link"
+                  >
+                    Ziyaret Et
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
 
               <div class="brand-card">
-                <div
-                  class="brand-card-logo is-clickable"
-                  onclick="window.open('https://www.instagram.com/xtgoyun/', '_blank', 'noopener')"
-                  role="button"
-                  tabindex="0"
-                  onkeydown="
-                    if (event.key === 'Enter' || event.key === ' ') {
-                      event.preventDefault();
-                      window.open('https://www.instagram.com/xtgoyun/', '_blank', 'noopener');
-                    }
-                  "
-                >
+                <div class="brand-card-logo">
                   <img
                     src="https://html-05b61c.gitlab.io/dv/assets/images/logo/dv_xtgoyun_logo_yatay.png"
                     alt="XTG Oyun"
@@ -2463,6 +2475,24 @@
                 </p>
                 <div class="brand-card-footer">
                   <span class="brand-tag">Oyun</span>
+                  <a
+                    href="https://www.instagram.com/xtgoyun/"
+                    target="_blank"
+                    rel="noopener"
+                    class="brand-link"
+                  >
+                    Ziyaret Et
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
@@ -2613,6 +2643,7 @@
                   <img
                     src="iştirak%20logolar/2j.png"
                     alt="İhlas Kaplıca Evleri"
+                    style="transform: scale(1.15)"
                   />
                 </a>
                 <a
@@ -2624,6 +2655,7 @@
                   <img
                     src="iştirak%20logolar/Armutlu_Tatil_Koyu.png"
                     alt="Armutlu Tatil Köyü"
+                    style="transform: scale(1.15)"
                   />
                 </a>
                 <a
@@ -2641,18 +2673,19 @@
                   href="https://x.com/ortaasyainvest"
                   target="_blank"
                   rel="noopener"
-                  class="affiliate-logo affiliate-logo--lg"
+                  class="affiliate-logo affiliate-logo--xl"
                 >
                   <img
                     src="iştirak%20logolar/Artboard%201%20copy%2014.png"
                     alt="Orta Asya Investment Holding"
+                    style="transform: scale(1.35)"
                   />
                 </a>
                 <a
                   href="https://x.com/sifayemekcom"
                   target="_blank"
                   rel="noopener"
-                  class="affiliate-logo"
+                  class="affiliate-logo affiliate-logo--md"
                 >
                   <img
                     src="iştirak%20logolar/şifa%20yemek%201.png"
@@ -2918,11 +2951,11 @@
               target="_blank"
             >
               <div class="news-card-img">
-                <img src="ida.jpeg" alt="Türkiye Today" />
+                <img src="ida.jpg" alt="IDA Esports" />
               </div>
               <div class="news-card-body">
                 <div class="news-card-cat">Dijital Varlıklar / Teknoloji</div>
-                <h4>IDA Esports'a partner takım statüsü</h4>
+                <h4>IDA Esports PUBG Dünya Şampiyonası'nda</h4>
                 <div class="news-card-link">
                   Devamını Oku
                   <svg
