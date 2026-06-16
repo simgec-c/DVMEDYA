@@ -286,7 +286,7 @@
         transform: translateY(-1px);
       }
       .btn-ghost {
-        background: rgba(255, 255, 255, 0.06);
+        background: #ffffff0f;
         color: rgba(255, 255, 255, 0.8);
         border: 1px solid rgba(255, 255, 255, 0.12);
       }
@@ -2344,8 +2344,8 @@
                 </div>
                 <h5>İDA E-Spor</h5>
                 <p>
-                  IDA Esports, PUBG Mobile arenasında mücadele eden profesyonel
-                  takım kimliğiyle rekabetin ve disiplinin en güçlü
+                  IDA Espor takımı, PUBG Mobile arenasında mücadele eden
+                  profesyonel takım kimliğiyle rekabetin ve disiplinin en güçlü
                   temsilcilerindendir. Oyuncuların tutkusu, koçun stratejik
                   bakış açısı ve takım ruhunun bütünleştiği bu yapı; her
                   turnuvada başarıya koşan, gelişimi merkeze alan ve
@@ -2574,10 +2574,7 @@
                   rel="noopener"
                   class="affiliate-logo affiliate-logo--lg"
                 >
-                  <img
-                    src="iştirak%20logolar/vakıf.png"
-                    alt="İhlas Vakfı"
-                  />
+                  <img src="iştirak%20logolar/vakıf.png" alt="İhlas Vakfı" />
                 </a>
                 <a
                   href="https://x.com/ihlaskoleji"
@@ -2860,7 +2857,12 @@
             class="news-card"
             id="kart-1"
             href="javascript:void(0)"
-            onclick="openVideoModal('turkiyegazetesi', 'Vali Gül\'den İhlas Medya\'ya teşekkür')"
+            onclick="
+              openVideoModal(
+                'turkiyegazetesi',
+                'Vali Gül\'den İhlas Medya\'ya teşekkür',
+              )
+            "
           >
             <div class="news-card-img">
               <img
@@ -2891,7 +2893,12 @@
             class="news-card"
             id="kart-2"
             href="javascript:void(0)"
-            onclick="openVideoModal('genctg', '&quot;Önemli olan doğru kitlelere erişebilmek&quot;')"
+            onclick="
+              openVideoModal(
+                'genctg',
+                '&quot;Önemli olan doğru kitlelere erişebilmek&quot;',
+              )
+            "
           >
             <div class="news-card-img">
               <img src="volkanbey.jpg" alt="Volkan Bey" />
@@ -2919,7 +2926,12 @@
             class="news-card"
             id="kart-3"
             href="javascript:void(0)"
-            onclick="openVideoModal('turkiyetoday', 'Türkiye Today: Küresel Arenada Dijital Güç')"
+            onclick="
+              openVideoModal(
+                'turkiyetoday',
+                'Türkiye Today: Küresel Arenada Dijital Güç',
+              )
+            "
           >
             <div class="news-card-img">
               <img src="bizden-haberler-today.jpeg" alt="Türkiye Today" />
@@ -2976,7 +2988,12 @@
               class="news-card"
               id="kart-5"
               href="javascript:void(0)"
-              onclick="openVideoModal('tgrthaber', 'TGRT Haber Dijitalde Büyümeye Devam Ediyor')"
+              onclick="
+                openVideoModal(
+                  'tgrthaber',
+                  'TGRT Haber Dijitalde Büyümeye Devam Ediyor',
+                )
+              "
             >
               <div class="news-card-img">
                 <img src="bizden-haberler-tgrt.jpeg" alt="Türkiye Today" />
@@ -3326,12 +3343,8 @@
           </button>
         </div>
         <div class="video-modal-video">
-          <video
-            id="videoModalPlayer"
-            controls
-            playsinline
-          >
-            <source id="videoModalSource" src="" type="video/mp4">
+          <video id="videoModalPlayer" controls playsinline>
+            <source id="videoModalSource" src="" type="video/mp4" />
             Tarayıcınız video oynatmayı desteklemiyor.
           </video>
         </div>
@@ -3462,11 +3475,14 @@
         // Map cfg.youtubeId to local video path
         let videoSrc = "";
         if (cfg.youtubeId === "_vRxaYWry8M") {
-          videoSrc = "https://upload.dvmedya.com/videos/2026/06/08/Haberde_Yapay_Zeka_Donemi_Baslad_Sadece_Sana_Ozel_Icerikler_TGRTHaber.comda_20260608_135747_720p.mp4";
+          videoSrc =
+            "https://upload.dvmedya.com/videos/2026/06/08/Haberde_Yapay_Zeka_Donemi_Baslad_Sadece_Sana_Ozel_Icerikler_TGRTHaber.comda_20260608_135747_720p.mp4";
         } else if (cfg.youtubeId === "ZdRKLlXEu4k") {
-          videoSrc = "https://upload.dvmedya.com/videos/2026/06/08/Turkiye_Gazetesinin_Dijital_Yuzu_Iftar_Yemeginde_Sektor_Temsilcileri_Bulustu_20260608_134350_720p.mp4";
+          videoSrc =
+            "https://upload.dvmedya.com/videos/2026/06/08/Turkiye_Gazetesinin_Dijital_Yuzu_Iftar_Yemeginde_Sektor_Temsilcileri_Bulustu_20260608_134350_720p.mp4";
         } else if (cfg.youtubeId === "pVv27PyqjOs") {
-          videoSrc = "https://upload.dvmedya.com/videos/2026/06/08/turkiyetoday_20260608_133736_720p.mp4";
+          videoSrc =
+            "https://upload.dvmedya.com/videos/2026/06/08/turkiyetoday_20260608_133736_720p.mp4";
         } else if (cfg.youtubeId === "IXmio-r1niA") {
           videoSrc = "videos/brand_tanitim.mp4";
         }
